@@ -1,0 +1,7 @@
+1、第一次使用navicat连接mysql时，会报1251错误：1251-Client does not support authentication protocol requested by server; consider upgrading MySQL client
+解决办法：
+  打开mysql输入以下命名：
+  use mysql；
+  ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '你的密码';
+  FLUSH PRIVILEGES;
+其中，root为用户名，你的密码改为用户名对应的密码即可
